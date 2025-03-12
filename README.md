@@ -2,32 +2,32 @@
 
 Структура материала:
 
--   <a href="https://github.com/pavloging/go-course-slice#вступление">Вступление</a>
--   <a href="https://github.com/pavloging/go-course-slice#какие-свойства-каналов-интерсно-изучить">Какие свойства каналов интересно изучить?</a>
--   <a href="https://github.com/pavloging/go-course-slice#проектирование-каналов">Проектирование каналов</a>
--   <a href="https://github.com/pavloging/go-course-slice#в-какой-области-памяти-хранятся-каналы">В какой области памяти хранятся каналы?</a>
--   <a href="https://github.com/pavloging/go-course-slice#структура-канала">Структура канала</a>
--   <a href="https://github.com/pavloging/go-course-slice#реализация-свойств-goroutine-safe-и-fifo">Реализация свойств: goroutine-safe и FIFO</a>
--   <a href="https://github.com/pavloging/go-course-slice#как-работают-буфер-канала-и-mutex">Как работают буфер канала и mutex</a>
--   <a href="https://github.com/pavloging/go-course-slice#передача-данных-в-канал">Передача данных в канал</a>
--   <a href="https://github.com/pavloging/go-course-slice#получение-данных-из-канала">Получение данных из канала</a>
--   <a href="https://github.com/pavloging/go-course-slice#переполнение-буфера">Переполнение буфера</a>
--   <a href="https://github.com/pavloging/go-course-slice#как-устроен-планировщик-scheduler">Как устроен планировщик (Scheduler)</a>
--   <a href="https://github.com/pavloging/go-course-slice#как-поставить-горутину-на-паузу">Как поставить горутину на паузу</a>
--   <a href="https://github.com/pavloging/go-course-slice#как-разбудить-горутину-очередь-спящих-горутин---sendq">Как разбудить горутину: очередь спящих горутин - sendq</a>
--   <a href="https://github.com/pavloging/go-course-slice#чтение-из-переполненного-канала">Чтение из переполненного канала</a>
--   <a href="https://github.com/pavloging/go-course-slice#пробуждение-спящей-горутины-sender">Пробуждение спящей горутины Sender</a>
--   <a href="https://github.com/pavloging/go-course-slice#чтение-из-пустого-канала">Чтение из пустого канала</a>
--   <a href="https://github.com/pavloging/go-course-slice#передача-данных-прямо-между-стэками-двух-горутин">Передача данных напрямую между стэками двух горутин</a>
--   <a href="https://github.com/pavloging/go-course-slice#небуферизированные-каналы">Небуферизированные каналы</a>
--   <a href="https://github.com/pavloging/go-course-slice#итоги-по-изучению-интерсных-свойств-каналов">Итоги по изучению интересных свойств каналов</a>
--   <a href="https://github.com/pavloging/go-course-slice#изучаем-код-реализации-каналов">Изучаем код реализации каналов</a>
--   <a href="https://github.com/pavloging/go-course-slice#изучаем-поведение-канала-вживую-с-помощью-дебагера">Изучаем поведение канала вживую с помощью дебагера</a>
--   <a href="https://github.com/pavloging/go-course-slice#как-работает-select">Как работает Select</a>
--   <a href="https://github.com/pavloging/go-course-slice#закрытие-канала">Закрытие канала</a>
--   <a href="https://github.com/pavloging/go-course-slice#код-закрытия-канала">Код закрытия канала</a>
--   <a href="https://github.com/pavloging/go-course-slice#итоги-почему-каналы-спроектированны-именно-так">Итоги: почему каналы спроектированы именно так?</a>
--   <a href="https://github.com/pavloging/go-course-slice#заключение">Заключение</a>
+-   <a href="https://github.com/pavloging/go-course-channels#вступление">Вступление</a>
+-   <a href="https://github.com/pavloging/go-course-channels#какие-свойства-каналов-интерсно-изучить">Какие свойства каналов интересно изучить?</a>
+-   <a href="https://github.com/pavloging/go-course-channels#проектирование-каналов">Проектирование каналов</a>
+-   <a href="https://github.com/pavloging/go-course-channels#в-какой-области-памяти-хранятся-каналы">В какой области памяти хранятся каналы?</a>
+-   <a href="https://github.com/pavloging/go-course-channels#структура-канала">Структура канала</a>
+-   <a href="https://github.com/pavloging/go-course-channels#реализация-свойств-goroutine-safe-и-fifo">Реализация свойств: goroutine-safe и FIFO</a>
+-   <a href="https://github.com/pavloging/go-course-channels#как-работают-буфер-канала-и-mutex">Как работают буфер канала и mutex</a>
+-   <a href="https://github.com/pavloging/go-course-channels#передача-данных-в-канал">Передача данных в канал</a>
+-   <a href="https://github.com/pavloging/go-course-channels#получение-данных-из-канала">Получение данных из канала</a>
+-   <a href="https://github.com/pavloging/go-course-channels#переполнение-буфера">Переполнение буфера</a>
+-   <a href="https://github.com/pavloging/go-course-channels#как-устроен-планировщик-scheduler">Как устроен планировщик (Scheduler)</a>
+-   <a href="https://github.com/pavloging/go-course-channels#как-поставить-горутину-на-паузу">Как поставить горутину на паузу</a>
+-   <a href="https://github.com/pavloging/go-course-channels#как-разбудить-горутину-очередь-спящих-горутин---sendq">Как разбудить горутину: очередь спящих горутин - sendq</a>
+-   <a href="https://github.com/pavloging/go-course-channels#чтение-из-переполненного-канала">Чтение из переполненного канала</a>
+-   <a href="https://github.com/pavloging/go-course-channels#пробуждение-спящей-горутины-sender">Пробуждение спящей горутины Sender</a>
+-   <a href="https://github.com/pavloging/go-course-channels#чтение-из-пустого-канала">Чтение из пустого канала</a>
+-   <a href="https://github.com/pavloging/go-course-channels#передача-данных-прямо-между-стэками-двух-горутин">Передача данных напрямую между стэками двух горутин</a>
+-   <a href="https://github.com/pavloging/go-course-channels#небуферизированные-каналы">Небуферизированные каналы</a>
+-   <a href="https://github.com/pavloging/go-course-channels#итоги-по-изучению-интерсных-свойств-каналов">Итоги по изучению интересных свойств каналов</a>
+-   <a href="https://github.com/pavloging/go-course-channels#изучаем-код-реализации-каналов">Изучаем код реализации каналов</a>
+-   <a href="https://github.com/pavloging/go-course-channels#изучаем-поведение-канала-вживую-с-помощью-дебагера">Изучаем поведение канала вживую с помощью дебагера</a>
+-   <a href="https://github.com/pavloging/go-course-channels#как-работает-select">Как работает Select</a>
+-   <a href="https://github.com/pavloging/go-course-channels#закрытие-канала">Закрытие канала</a>
+-   <a href="https://github.com/pavloging/go-course-channels#код-закрытия-канала">Код закрытия канала</a>
+-   <a href="https://github.com/pavloging/go-course-channels#итоги-почему-каналы-спроектированны-именно-так">Итоги: почему каналы спроектированы именно так?</a>
+-   <a href="https://github.com/pavloging/go-course-channels#заключение">Заключение</a>
 
 ## Что такое каналы?
 
